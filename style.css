@@ -5,50 +5,51 @@
   font-family: Lato, sans-serif;
 }
 
-.info {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.info-img {
+.header__img {
   width: 100%;
 }
 
-.info .more-inf {
+.header__text {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .info {
+  .header {
     text-align: center;
   }
 }
 
-.main-container {
+.todo-list {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.todo-list__item-label,
+.todo-list__item-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.todo-list__row {
   display: flex;
 }
 
-.list {
+.todo-list__items {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
-.list-item,
-.title {
+.todo-list__item,
+.todo-list__title {
   list-style: none;
 }
 
@@ -59,7 +60,7 @@
 
 .btn {
   background: none;
-  border: 0px;
+  border: 0;
   color: #888;
   font-size: 15px;
   width: 60px;
@@ -72,7 +73,7 @@
 }
 
 /* Heading */
-.title,
+.todo-list__title,
 .label[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -111,7 +112,7 @@
 }
 
 /* Task list */
-.list-item {
+.todo-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -121,22 +122,22 @@
   align-items: center;
 }
 
-.list-item > * {
+.todo-list__item > * {
   vertical-align: middle;
 }
 
-.list-item > .input[type="checkbox"] {
+.todo-list__item > .input[type="checkbox"] {
   margin: 0 10px;
 }
 
-.list-item > .label {
+.todo-list__item > .label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item > .input[type="text"] {
+.todo-list__item > .input[type="text"] {
   width: 226px;
 }
 
@@ -151,21 +152,21 @@
 }
 
 /* Completed */
-.list#completed-tasks .label {
+.todo-list__items#completed-tasks .label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list .list-item .input[type=text] {
+.todo-list__items .todo-list__item .input[type=text] {
   display: none;
 }
 
-.list .list-item.edit-mode .input[type=text] {
+.todo-list__items .todo-list__item.edit-mode .input[type=text] {
   display: inline-block;
   width: 224px
 }
 
-.list .list-item.edit-mode .label {
+.todo-list__items .todo-list__item.edit-mode .label {
   display: none;
 }

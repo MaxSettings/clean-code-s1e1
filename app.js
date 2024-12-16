@@ -19,7 +19,7 @@ var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
 
-    listItem.classList.add("list-item");
+    listItem.classList.add("todo-list__item");
 
     //input (checkbox)
     var checkBox=document.createElement("input");
@@ -45,12 +45,12 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.classList.add("task");
+    label.classList.add("todo-list__item-label");
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.classList.add("task");
+    editInput.classList.add("todo-list__item-input");
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.classList.add('btn');
